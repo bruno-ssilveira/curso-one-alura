@@ -5,12 +5,14 @@
     var IDADE1 = 10;
     var IDADE2 = "20";
     var IDADE3 = 12;
-
-    document.write("A média das idades é <br>");
-    document.write("<br>" + (IDADE1 + IDADE2 + IDADE3)/3);
-
-    document.write("<br>" + "6"/3);
     
+    var pularLinha = "<br><br>"
+
+    document.write("A média das idades é " + pularLinha);
+    document.write(pularLinha + (IDADE1 + IDADE2 + IDADE3)/3);
+
+    document.write(pularLinha + "6"/3);
+
 
     document.write("<h2> Álcool ou Gasolina? </h2>");
 
@@ -20,7 +22,7 @@
     var caminhoAlcool = 300;
 
     
-    document.write("<br> O KM/L com gasolina é " + caminhoGas/tanque);
-    document.write("<br> O KM/L com álcool é " + caminhoAlcool/tanque);
+    document.write(pularLinha + "O KM/L com gasolina é " + caminhoGas/tanque);
+    document.write(pularLinha + "O KM/L com álcool é " + caminhoAlcool/tanque);
 
 </script>
