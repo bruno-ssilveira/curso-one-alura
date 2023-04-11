@@ -2,12 +2,22 @@
 
 <script>
 
+	function pulaLinha() {
+
+		document.write("<br><br>");
+
+	};
+
 	function mostra(frase) {
 
 	    document.write(frase);
-
+		pulaLinha();
     };
 
+
+	var abc = "cba";
+
 	mostra("hello world!");
+	mostra("document.write " + abc);
 
 </script>
