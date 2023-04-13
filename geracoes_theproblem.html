@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+
+    var anosPassaram = 2023 - 1500;
+    var mediaGeracoes = anosPassaram/28;
+
+    function pulaLinha() {
+
+        document.write("<br>");
+
+    }
+
+    function mostra(texto) {
+
+        document.write(texto);
+
+    }
+
+    mostra("Em média, um casal tem filhos quando atinge a idade de 28 anos.");
+
+    pulaLinha();
+
+    mostra("De 1500 até hoje se passaram " + anosPassaram + " anos, logo tivemos em média " + Math.round(mediaGeracoes) + " gerações.");
+    
+</script>
