@@ -1,0 +1,37 @@
+<meta charse="UTF-8">
+
+<script>
+
+    function geraCodigo(letra, numero1, numero2) {
+
+        var codigo = ("GH" + (numero1 / 2) + (numero2 - 8));
+        return codigo;
+        
+
+    }
+    
+    var cod = geraCodigo("texto", 20, 30);
+
+    document.write(cod);
+
+    function pulaLinha() {
+
+        document.write("<br><br>");
+        
+    }
+
+    function imc(peso, altura) {
+
+        return peso / (altura * altura);
+
+    }
+
+    var imcBruno = imc(60, 1.78);
+    var imcAmanda = imc(60, 1.70);
+    var imcTotal = imcBruno + imcAmanda;
+
+    pulaLinha();
+
+    document.write("A soma dos imc's é " + imcTotal);
+
+</script>

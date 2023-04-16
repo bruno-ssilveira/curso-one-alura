@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br><br>");
+
+    }
+
+    function mostra(texto) {
+
+        document.write(texto);
+        pulaLinha();
+
+    }
+
+    var vitorias = prompt("Qual o número de vitórias?");
+    var empates = prompt("Qual o número de empates?");
+
+    var pontuacao = ((vitorias * 3) + (empates * 1));
+
+    mostra("O resultado da pontuação é " + pontuacao);
+
+</script>
