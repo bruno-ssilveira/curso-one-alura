@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numSorteio = Math.round(Math.random() * 10);
+
+    var chances = 1
+
+    while(chances <= 3) {
+
+        var chute = parseInt(prompt("Chute o número escolhido"));
+
+        if(numSorteio == chute) {
+
+            mostra("Parabéns, eu escolhi o número " + numSorteio);
+            break;
+        } else {
+
+            mostra("Você errou, tente novamente.");
+            chances++;
+        }
+    }
+
+</script>
