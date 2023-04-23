@@ -6,12 +6,16 @@
 <script>
 
     var texto = document.querySelector("input");
-
+    texto.focus();
+    
     var button = document.querySelector("button");
 
     function mostraTexto() {
 
         alert(texto.value);
+
+        texto.value = "";
+        texto.focus();
     }
 
     button.onclick = mostraTexto;
