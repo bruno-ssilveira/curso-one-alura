@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<h1>Ask "Give me the answer?" to the universe and just believe</h1>
+
+<input/>
+
+<button>just the truth</button>
+
+<script>
+
+    var input = document.querySelector("input");
+    input.focus();
+
+    var button = document.querySelector("button");
+    button.onclick = youcan;
+
+    var pergunta = "Give me the answer?"
+
+    function youcan() {
+
+        if(input.value == pergunta) {
+            
+            var phrases = ["You are the next Steve Jobs", "You can be more", "You born to win", "Just keep going, you are in the right way", "You are what the world needs", "You are better than you think", "You got that, don't quit", "The dev are tired, but the universe hide someting great for you", "I can see your future, a dev full stack", "It's just the beggining, you will shine"];
+            alert(phrases[Math.round(Math.random() * 10)]);
+        }
+    }
+
+
+</script>
