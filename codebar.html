@@ -1,0 +1,65 @@
+<meta charset="UTF-8">
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext("2d");
+
+    pincel.fillStyle = "lightgray";
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenhaQuadrado2015(posicao1, posicao2, largura, altura, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(posicao1, posicao2, largura, altura, cor);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(posicao1, posicao2, largura, altura, cor);
+    }
+
+    // 2015
+    desenhaQuadrado2015(200, 150, 50, 50, "blue");
+    desenhaQuadrado2015(200, 200, 50, 25, "green");
+    desenhaQuadrado2015(200, 225, 50, 20, "yellow");
+    desenhaQuadrado2015(200, 245, 50, 5, "red");
+
+    // 2016
+    desenhaQuadrado2015(300, 150, 50, 65, "blue");
+    desenhaQuadrado2015(300, 215, 50, 20, "green");
+    desenhaQuadrado2015(300, 235, 50, 13, "yellow");
+    desenhaQuadrado2015(300, 248, 50, 2, "red");
+
+    function desenhaTexto(texto, cor, x, y) {
+
+        var tela = document.querySelector("canvas");
+        var pincel = tela.getContext("2d");
+
+        pincel.font = "20px Georgia";
+        pincel.fillStyle = cor
+        pincel.fillText(texto, x, y);
+    }
+
+    // anos
+    desenhaTexto("2015", "black", 200, 130);
+    desenhaTexto("2016", "black", 300, 130);
+
+    // navegadores
+    desenhaTexto("Chrome", "blue", 60, 170);
+    desenhaTexto("Firefox", "green", 60, 195);
+    desenhaTexto("Safari", "yellow", 60, 220);
+    desenhaTexto("Outros", "red", 60, 245);
+
+    // porcentagens 2015
+    desenhaTexto("50%", "blue", 200, 280);
+    desenhaTexto("25%", "green", 200, 310);
+    desenhaTexto("20%", "yellow", 200, 340);
+    desenhaTexto("5%", "red", 200, 370);
+
+    // porcentagens 2016
+    desenhaTexto("65%", "blue", 300, 280);
+    desenhaTexto("20%", "green", 300, 310);
+    desenhaTexto("13%", "yellow", 300, 340);
+    desenhaTexto("2%", "red", 300, 370);
+
+</script>
