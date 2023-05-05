@@ -10,15 +10,24 @@
 
     var cor = ["blue", "red", "green", "yellow"];
     var corAtual = 0
+    var shiftKey = 10
 
     function desenhaCirculo(evento) {
+
+        if(evento.shiftKey == true) {
+
+            shiftKey = 10 + 10
+        } else {
+
+            shiftKey = 10
+        }
 
         var x = evento.pageX - tela.offsetLeft;
         var y = evento.pageY - tela.offsetTop;
 
         pincel.fillStyle = cor[corAtual];
         pincel.beginPath();
-        pincel.arc(x, y, 10, 0, 2 * 3.14);
+        pincel.arc(x, y, shiftKey, 0, 2 * 3.14);
         pincel.fill();
         console.log(x + "," + y);
     }
