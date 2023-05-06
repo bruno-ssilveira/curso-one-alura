@@ -8,16 +8,35 @@
     pincel.fillStyle = "lightgray";
     pincel.fillRect(0, 0, 600, 400);
 
-    function desenha(x, y, raio) {
+    function desenha(x, y, raio, cor) {
 
-        pincel.fillStyle = "blue"
+        pincel.fillStyle = cor
         pincel.beginPath();
         pincel.arc(x, y, raio, 0, 2 * Math.PI);
         pincel.fill();
     }
 
-    for(var x = 20; x < 600; x++) {
-        desenha(20, 20, 10);
+    function limpaTela() {
+        pincel.clearRect(0, 0, 600, 400);
     }
+
+    var x = 20
+
+    function animation() {
+
+        limpaTela();
+        desenha(x, 70, 30, "blue");
+        desenha(x, 90, 30, "blue");
+        desenha(x, 110, 30, "blue");
+        desenha(x, 140, 30, "blue");
+        desenha(x, 140, 45, "blue");
+        x++;
+        
+        if(x > 600) {
+            x = 20
+        }
+    }
+
+    setInterval(animation, 5);
 
 </script>
